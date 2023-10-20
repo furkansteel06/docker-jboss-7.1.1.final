@@ -9,7 +9,7 @@ Because you must accept the Terms and Conditions of Oracle prior to installing t
 
 In order to build this image just run the following command (it is assumed that Docker is installed properly either natively or with Boot2Docker and started):
 
-    docker build -t ovanekem/docker-jboss-7.1.1.final .
+    docker build -t furkan/docker-jboss-7.1.1.final .
   
 Building the project will take some time as it downloads the JBOSS AS package from JBOSS Downloads page.
 
@@ -17,7 +17,8 @@ You can then either run this image or extend it.
 
 In order to run it, run the following Docker command:
 
-    docker run -it -p 8080:8080 -p 9990:9990 ovanekem/docker-jboss-7.1.1.final
+    docker run -it -d -p 8080:8080 -p 9990:9990 furkan/docker-jboss-7.1.1.final
+    
   
 You can now access (replace <ip_of_docker> with either localhost or the ip of Boot2Docker) http://<ip_of_docker>:8080.
 You can log into the administration console of JBOSS using admin as login and welcome1 as password.
